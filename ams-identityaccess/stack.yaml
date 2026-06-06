@@ -1,20 +1,20 @@
-# ams.identity ReadyStackGo Manifest
+# IdentityAccess ReadyStackGo Manifest
 # Identity Provider (IdentityServer / AdminPortal / ClientHub / EmailSender)
 #
-# Lives as its own RSGO product so operators can deploy / upgrade Identity
+# Lives as its own RSGO product so operators can deploy / upgrade IdentityAccess
 # independently of the larger ams.project stack. The actual services are
 # declared in the identity-access.yaml fragment next to this file.
 
 metadata:
-  name: ams.identity
-  productId: com.ams-erp.identity
+  name: IdentityAccess
+  productId: com.ams-erp.identityaccess
   description: IdentityServer-based identity provider for AMS products
-  productVersion: "1.0.0-ci"
+  productVersion: "3.0.2"
   author: ams solution GmbH
   category: Identity
   tags:
     - ams
-    - identity
+    - identityaccess
     - oauth2
     - oidc
 

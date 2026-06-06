@@ -19,7 +19,7 @@ Add it during the setup wizard (**Stack Sources** step) or later under
 | Product | Description | Version | Stacks |
 |---------|-------------|---------|--------|
 | [ams.project](ams-project/) | Enterprise Project Management System | 4.0.0-ci | 16 |
-| [ams.identityaccess](ams-identityaccess/) | Standalone Identity Provider | 1.0.0-ci | 1 |
+| [IdentityAccess](ams-identityaccess/) | Standalone Identity Provider | 3.0.2 | 1 |
 
 ### ams.project
 
