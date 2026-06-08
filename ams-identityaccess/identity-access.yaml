@@ -85,7 +85,7 @@ variables:
 
 services:
   identity-api:
-    image: amssolution/identityaccess.identityserver:linux-latest
+    image: amssolution/identityaccess.identityserver:linux-v3.2.0
     containerName: identity-api
     ports:
       - "7614:80"
@@ -122,7 +122,7 @@ services:
       port: 80
 
   adminportal:
-    image: amssolution/identityaccess.adminportal:linux-latest
+    image: amssolution/identityaccess.adminportal:linux-v3.2.0
     containerName: adminportal
     ports:
       - "7615:80"
@@ -151,7 +151,7 @@ services:
       port: 80
 
   identityaccess-clienthub:
-    image: amssolution/identityaccess.clienthub:linux-latest
+    image: amssolution/identityaccess.clienthub:linux-v3.2.0
     containerName: identityaccess-clienthub
     ports:
       - "7616:80"
@@ -178,7 +178,7 @@ services:
       port: 80
 
   identityaccess-emailsender:
-    image: amssolution/identityaccess.emailsender:linux-latest
+    image: amssolution/identityaccess.emailsender:linux-v3.2.0
     containerName: identityaccess-emailsender
     ports:
       - "7617:80"

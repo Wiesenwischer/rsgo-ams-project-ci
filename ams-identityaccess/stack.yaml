@@ -9,7 +9,7 @@ metadata:
   name: IdentityAccess
   productId: com.ams-erp.identityaccess
   description: IdentityServer-based identity provider for AMS products
-  productVersion: "3.0.2"
+  productVersion: "3.2.0"
   author: ams solution GmbH
   category: Identity
   tags:
