@@ -86,6 +86,7 @@ services:
       ReverseProxy__Clusters__admin-api-cluster__Destinations__destination1__Address: http://admin-api:8080/
       ReverseProxy__Clusters__admin-api-cluster__Metadata__Audience: ams
       ReverseProxy__Clusters__admin-web-cluster__Destinations__destination1__Address: http://admin-web:3000/
+      ReverseProxy__Clusters__customer-docs-cluster__Destinations__destination1__Address: http://customer-docs:80/
       BackendServices__Admin__BaseUrl: http://admin-api:8080
       Cors__AllowedOrigins__0: http://${AMS_PROJECT_EXTERNAL_DNS_NAME_OR_IP}:${BFF_PORT}
       Cors__AllowedOrigins__1: http://localhost:3000
@@ -248,6 +249,24 @@ services:
     healthCheck:
       type: tcp
       port: 3000
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      startPeriod: 20s
+
+  # Customer Documentation Portal — static Docusaurus site (nginx).
+  # Reachable via the BFF route /docs without authentication.
+  customer-docs:
+    image: amssolution/customer-docs:linux-latest-ci
+    containerName: customer-docs
+    networks:
+      - ams-project-backend
+    restart: unless-stopped
+    healthCheck:
+      type: http
+      path: /hc
+      port: 80
+      test: ["CMD", "wget", "-qO-", "http://localhost/hc"]
       interval: 30s
       timeout: 10s
       retries: 3
